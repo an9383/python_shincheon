@@ -1,0 +1,41 @@
+1. crawling (정적, 동적) <= 데이터, 자동화
+2. Django 웹
+3. PCA => 시각화
+	통계 => 분류
+	
+======리뷰=========
+1. 변수, 리스트, dictionary, 
+
+리스트명령어: append, insert, remove
+dictionary: keys(), values(), items()
+string: formating, split, join, replace
+
+colabatory, 쥬피터
+pycharm, VSCode
+
+data = [
+    ['john',90,85,100],
+    ['peter',90,85,100],
+    ['susan',90,85,100],
+    ['su',90,85,100]
+]
+
+groupby는 통계를 내기위하여 사용함.
+
+sum()
+count()
+mean()
+medium()
+
+
+merge,pivot_table, groupby, apply
+
+df = pd.read_csv(path): 읽기
+	df.to_csv(path): 저장
+	자료(dictionary, DataFrame, list): 읽기, 저장
+	
+import pickle
+	with open(경로,'wb') as file:
+		pickle.dump(data,file)
+	with open(경로,'rb') as file:
+		df = pickle.load(file)

@@ -1,0 +1,93 @@
+import의 의미는 페이지를 붙인다.
+
+for문은 순서가 있는 리스트만 사용할수 있음. object는 사용할수 없다.
+
+for key in list:
+['john','peter','sue']
+
+for idx, var in enumerate:
+	print(idx,var)
+	
+번호가 필요하면 enumerate를 사용한다.
+for datum in data:
+	print(datum)  ==> 자료만 가져올때
+for idx, datum in enumerate(data):
+	print(idx,datum) ==> 번호를 가져올때는
+	
+objs = {'국어':100,'수학':95,'과학':100}
+for key,value in objs.items():
+	print(key,value)
+	
+for _,value in objs.items():	==> objs.items()는 리스트구조
+	print(key,value)	==> key값이 필요없음.
+	
+	
+lambda 함수: 익명함수
+	f(x) = 2x+3
+	f(x,y)= 2x+3y+4z+2
+
+	lambda x: 2x+3 if x%2==0 else 2x+4
+	lambda x,y: 2x+3y+2 else 2x+3y+4
+	
+	map(lambda kor, math, eng: (kor+math+eng)/3, 
+		[85,90,97],[100,90,78],[100,87,95])
+		
+피제수 = 제수*몫 + 나머지
+
+
+for문은 순서가 있는 경우. 반복을 리스트횟수만큼 할 경우.
+	break
+while문은 몇번을 돌릴지 모르겠다. 
+	whild True:
+	r = p%q
+	p = q
+	q = r
+	if r == 0:
+		print(p)
+		break
+		
+break, continue ==> for, while문에서 사용
+중간에서 멈추고 싶다 ==> break
+이 경우는 제외하고 싶을때  ==> continue
+break,continue를 사용할때는 if문을 반드시 사용해야 한다.
+
+return: 함수를 멈추고 싶을때 return밑으로는 실행이 안됨.
+break: 멈추고 싶을때 주로 뒤쪽에 위치함.
+continue: 제외하고 싶을때 주로 위쪽에 위치함
+
+
+{'a':1,'b':2,'c':3,'d':1} ==> encode
+{1:'a',2:'b',3:'c',4:'d'} ==> decode
+	alpha =['a','b','c','d']
+	encode ={}
+	encode['a']=1
+	encode['b']=2
+	encode['c']=3
+	encode['d']=4
+	
+	alphas = {}
+	for num, alpha in enumerate(alphas):
+		encode[alpha]=num
+	encode = {alpha:num+1 for num,alpha in enumerate(alphas)}
+	decode = {num+1:alpha for num,alpha in enumerate(alphas)}
+
+obj = {}	
+for p in range(10):
+	for s in range(5):
+		obj[(p,s)] = p+s
+		
+pandas는 for문을 거의 사용하지 않는다.
+string <==> list
+
+pnadas는 테이블 구조이다.
+데이터프레임은 테이블의 확장판이다. 
+테이블은 엑셀구조같은 것이다.
+데이터프레임은 obj구조이다.
+columns = ['이름','국어','수학','과학']
+score_df = pandas.DataFrame(columns=columns)
+pip install pandas
+
+
+score_df['국어'] : 컬럼을 읽을때
+score_df.loc[0] : 레코드를 읽을때 
+score_df.loc[0,'국어']

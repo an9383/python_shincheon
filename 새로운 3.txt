@@ -1,0 +1,65 @@
+class customer:
+	def __init__(self, name, address, phone):
+		self.name = name
+		self.address = address
+		self.phone = phone
+		
+		
+john = Customer('john','Seoul','010-1111-2222')
+john이 self임.
+
+함수를 구성하려고 def를 구성하면 self가 뒤따라온다.
+self는 데이터를 집어넣는 변수를 의미함.
+john = Customer('john','Seoul','010-1111-2222')
+john변수자체가 self임.
+
+def change_phone(self, new):
+	self.phone = new
+	
+__밑에 넣는 것은 내장함수라는 의미임.
+class만의 내장함수가 있음.
+__init__
+__call__
+__repr__
+
+__call__은 텐서플로에서 많이 씀.
+__repr__은 화면에 보기 좋게 표시할때 처리함.
+
+cust_merge = pd.merge (custormer, order, on='cust_id', how='inner')
+total_merge = pd.merge(cust_merge, book, on='book_id', how='inner')
+
+pandas ===> projection, 조건
+
+# projection
+df['cust_name']
+
+# 조건
+df['cust_name'] == 'Peter'
+
+# 실행할때
+df[df['cust_name'] == 'Peter']
+
+
+#뷰가 보여주는 값
+다중행
+단일행
+스칼라: 단일값
+
+단일행과 스칼라값이 걸릴때는 조건이 걸릴때 
+
+벡터: 속성이 여러개 보여주는 것
+스칼라: 속성중에 하나만 보여주는 것
+
+
+index: column
+
+values: 
+
+#pandas
+groupby
+
+apply(map)
+
+merge: 결합
+
+pivot_table: 조합  ==> 시각화할때 매우 중요. index, values, aggrfunc, columns, fill_values

@@ -1,0 +1,27 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def process_form(request):
+    if request.method == "POST":
+        username = request.POST.get("username")  # 폼 데이터 가져오기
+        return HttpResponse(f"입력한 이름: {username}")
+    return render(request, 'form.html')  # GET 요청 시 폼 페이지 보여주기
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 입력</title>
+</head>
+<body>
+    <h1>이름을 입력하세요</h1>
+    <form method="POST" action="{% url 'process_form' %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="이름 입력">
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

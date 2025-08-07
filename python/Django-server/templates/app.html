@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 입력</title>
+</head>
+<body>
+    <h1>이름을 입력하세요</h1>
+    <form method="POST" action="{% url 'app.main' number=number %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="이름 입력">
+        <button type="submit">제출</button>
+    </form>
+    {% if username %}
+    <br><div>대답</div><br>
+    <div><b>{{username}}</b></div>
+    {% endif %}
+</body>
+</html>

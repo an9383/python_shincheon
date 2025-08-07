@@ -1,0 +1,53 @@
+1. 전역공간에 가상공간을 .VENV ==> lib  ==> site-package(의존성)
+
+2. python 3.10.0 은 번역기임. ==> pyCharm 편집기 ==> command
+
+# Script 파일이름  == 실행 파일이름
+
+wifi: 12345678
+
+변수는 반정형데이터이고 
+
+정형은 숫자
+비정형은 문자열
+반정형은 정형혹은 비정형데이터를 처리하는 명령어혹은 변수등 ex) 내장함수(append,insert... 등)
+
+1. 정형 : 숫자
+2. 비정형 : 문자열
+3. 리스트(list), 배열(array):[]
+4. 딕셔널리(dict): 객체(object):{}
+
+a = {'국어':100, '국어':95,} 
+key값은 중복이 되어도 되지만 value값은 중복이 되어도 됨.
+
+자료구조
+1. 정형
+2. 비정형 ==> 문자열 == 순서: 0,1,2
+3. 리스트 ==> 배열 == 순서: index 0,1,2,3 mutable(수정가능). 순서가 있음.
+4. object(객체) : key,value형식으로 자료를 다룸. 순서가 없음. mutable
+5. tuple : 리스트와 비슷하지만 immutable 불변성자료구조이다.
+6. 집합 : unique 하여 중복이 안됨. 자료구조로는 사용이 안됨.
+
+리스트 (mutable)
+1. indexing(순서:0,1,2...) : 수정
+2. append, insert : 추가
+3. remove : 삭제
+
+문자열은 일종의 리스트이다. immutable. 
+
+문자열 ===> 리스트 (Split), replace
+리스트 ===> 문자열 (join) 
+
+내장함수중에 중요한 것
+append,insert,remove,index,len
+split,join,format
+
+list에서 가장중요한 함수
+zip: 두개를 묶는것 리스트를 다루면서 리스트로 출력하기에 for문을 돌릴수 있음. list1[a,b,c], list2[1,2,3] ==> zip[(a,1),(b,2),(c,3)]
+map: 리스트를 다룸. 함수관계를 매치시킴. 짝을 맞춤. 함수를 하나 만들어야 함. 
+
+객체수정,삭제
+obj['과학']=100
+del obj['과학']
+
+format은 자바스크립트 문자열템플릿
